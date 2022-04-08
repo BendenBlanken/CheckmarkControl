@@ -6,4 +6,4 @@ Perfect for those fields that only show information. These are non-interactable 
 
 # Download
 
-https://github.com/BendenBlanken/CheckmarkControl/releases
+[Release](https://github.com/BendenBlanken/CheckmarkControl/releases)
