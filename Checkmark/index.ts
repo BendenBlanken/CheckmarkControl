@@ -45,6 +45,7 @@ export class Checkmark implements ComponentFramework.StandardControl<IInputs, IO
     {
         // Add code to update control view
         this._context = context;
+        this._value = context.parameters.inputProperty.raw;
 
         var _divParentElement  = document.createElement("div");
 
