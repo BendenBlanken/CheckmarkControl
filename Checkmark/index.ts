@@ -45,6 +45,7 @@ export class Checkmark implements ComponentFramework.StandardControl<IInputs, IO
     {
         // Add code to update control view
         this._context = context;
+
         var _divParentElement  = document.createElement("div");
 
         var _imgElement: HTMLImageElement;
@@ -64,7 +65,14 @@ export class Checkmark implements ComponentFramework.StandardControl<IInputs, IO
 
         _divParentElement.appendChild(_imgElement);
         
-        this._container.appendChild(_divParentElement);
+        if (this._container.children.length > 0) {
+            const element = this._container.children[0];
+            element.replaceChild(_divParentElement, element.childNodes[0]);
+        }
+        else {
+            this._container.appendChild(_divParentElement);
+        }
+
     }
 
     /**
