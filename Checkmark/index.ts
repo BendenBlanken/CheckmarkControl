@@ -3,8 +3,6 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 export class Checkmark implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     // Value of the field is stored and used inside the control 
 	private _value: boolean;
-	// track if the value is null
-	private _valueIsNull: boolean;
     // keep referene to the select wrapper
 	private _container: HTMLDivElement;
 	// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
@@ -32,7 +30,6 @@ export class Checkmark implements ComponentFramework.StandardControl<IInputs, IO
 		this._context = context;
 		this._container = container;
 
-		this._valueIsNull = context.parameters.inputProperty.raw === null;
 		this._value = context.parameters.inputProperty.raw;
     }
 
